@@ -6,6 +6,11 @@ provider "random" {}
 
 resource "random_pet" "table_name" {}
 
+resource "aws_instance" "TerraCloudDemo" {
+  ami  = "ami-40d28157"
+  instance_type = "t2.nano"
+}
+
 resource "aws_dynamodb_table" "tfc_example_table" {
   name = "${var.db_table_name}-${random_pet.table_name.id}"
 
