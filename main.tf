@@ -9,6 +9,7 @@ resource "random_pet" "table_name" {}
 resource "aws_instance" "TerraCloudDemo" {
   ami  = "ami-0a701a5870c82a0cd"
   instance_type = "t2.nano"
+  count = var.ec2_count
 }
 
 resource "aws_dynamodb_table" "tfc_example_table" {
