@@ -17,3 +17,8 @@ variable "db_write_capacity" {
   type    = number
   default = 1
 }
+
+variable "ec2_count" {
+  type    = number
+  default = 1
+}
